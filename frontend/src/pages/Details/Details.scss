@@ -8,6 +8,12 @@
     margin: auto;
     max-width: 800px;
     .details {
+      @media (min-width: 1920px) {
+        h1 {
+          width: 20vh;
+        }     
+       }
+
       margin-bottom: 30px;
       margin-top: 70px;
       margin-left: 10px;
@@ -23,6 +29,10 @@
         align-items: center;
       }
       .picture {
+        @media (min-width: 1920px) { // Adjust the breakpoint as needed
+          height: 60vh; // Modify the height for larger screens
+        }
+
         height: 80vh;
         @include tablet {
           justify-content: center;

@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import axios from 'axios';
-import './Featured.scss';
-import { AuthContext } from '../../auth/authContext';
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import axios from "axios";
+import "./Featured.scss";
+import { AuthContext } from "../../auth/authContext";
 
 function Featured({ type }) {
   const [randomContent, setRandomContent] = useState({});
@@ -14,8 +14,8 @@ function Featured({ type }) {
   useEffect(() => {
     const getRandomContent = async () => {
       try {
-        let path = 'content/random';
-        let pathtype = type ? `?type=${type}` : '';
+        let path = "content/random";
+        let pathtype = type ? `?type=${type}` : "";
         const response = await axios.get(path + pathtype, {
           headers: { authorization: `Bearer ${user.token}` },
         });
@@ -39,11 +39,6 @@ function Featured({ type }) {
 
   return (
     <div className="featured">
-      {type && (
-        <div className="category">
-          <span>{type === 'movies' ? 'Movies' : 'Series'}</span>
-        </div>
-      )}
       <img src={randomContent.img} alt={randomContent.title} />
       <div className="info">
         <img src={randomContent.imgTitle} alt={randomContent.title} />

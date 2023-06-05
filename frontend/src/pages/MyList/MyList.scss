@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+
+  .myist-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+       background: linear-gradient(
+         to bottom,
+         rgba(0, 0, 0, 0) 0%,
+         rgba(0, 0, 0, 1) 100%
+      ),
+       url('https://mebincdn.themebin.com/1664271579476.jpg');  color: white;
+  overflow: hidden;
+  background-size: cover;
+   position: relative;
+  }
+  
+  .mylist-header {
+    font-size: 48px;
+    color: red;
+    background: transparent;
+
+  }
+  
+  .mylist-link {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff8080; 
+    background: transparent;
+    text-decoration: underline;
+  }
+
+

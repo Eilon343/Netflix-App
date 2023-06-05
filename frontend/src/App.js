@@ -1,11 +1,12 @@
-import './App.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
-import WatchPage from './pages/WatchPage/WatchPage';
-import Details from './pages/Details/Details';
-import SearchPage from './pages/SearchPage/SearchPage';
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import WatchPage from "./pages/WatchPage/WatchPage";
+import Details from "./pages/Details/Details";
+import SearchPage from "./pages/SearchPage/SearchPage";
+import MyList from "./pages/MyList/MyList";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/watch/:id" element={<WatchPage />} />
           <Route exact path="/details/:id" element={<Details />} />
           <Route exact path="/search" element={<SearchPage />} />
+          <Route exact path="/my-list" element={<MyList />} />
         </Routes>
       </BrowserRouter>
     </div>
