@@ -10,7 +10,6 @@ authRouter.post(
   '/login',
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
-    console.log(user);
 
     if (user) {
       console.log(req.body.password);
